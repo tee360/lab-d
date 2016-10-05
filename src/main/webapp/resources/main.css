@@ -1,0 +1,44 @@
+/*
+ * Source Material (c) 2016 GCD
+ * All rights reserved
+ */
+form {
+	margin: 2em 0;
+}
+
+form div {
+	margin-bottom: .5em;
+}
+
+form div > label {
+	display: inline-block;
+	width: 6em;
+	font-weight: bold;
+}
+
+.action-bar {
+	margin: 1em .5em;
+}
+
+a {
+	color: #0000ee;
+}
+
+a.add-btn {
+	color: black;
+	text-decoration: none;
+	background-color: #ccc;
+	border: 2px solid gray;
+	border-color: silver gray gray silver;
+	border-radius: 7px;
+	padding: 2px 8px;
+}
+
+.nav a {
+	padding: 0px 4px;
+	border-left: 2px solid gray;
+}
+
+.nav a:first-child {
+	border-left: none;
+}
