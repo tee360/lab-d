@@ -28,6 +28,11 @@
 		<label>Category</label>
 		<input type="text" name="category" value="${movie.category}"/>
 	</div>
+	<div>
+		<label class="nav">Additional Movie Info</label>
+		<a href="<c:url value="/movieinfo"/>"> Additional Movie Info</a>
+		<a href="<c:url value="/movies"/>">Back to Movies List</a>
+	</div>
 	<button type="submit">Save Changes</button>
 </form>
 

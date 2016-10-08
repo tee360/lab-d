@@ -34,14 +34,14 @@ public class MovieInfoService {
 			// parse the HTTP response body to JSON
 			JsonElement root = new JsonParser().parse(reader);
 			// pick the "currentobservation" key from the root JSON object.
-			JsonObject currentObservation = root.getAsJsonObject().get("currentobservation").getAsJsonObject();
+			JsonObject rating1 = root.getAsJsonObject();
 
 			Movieinfo movieinfo = new Movieinfo();
 			// pick the "Rating" key from the currentobservation object
-			movieinfo.setRating(currentObservation.get("Rating").getAsString());
+			movieinfo.setRating(rating1.get("Rating").getAsString());
 			// pick the "Poster" key from the currentobservation object
 			movieinfo.setImage("http://netflixroulette.net/api/posters/541018.jpg"
-					+ currentObservation.get("Poster").getAsString());
+					+ rating1.get("Poster").getAsString());
 
 			return movieinfo;
 		} catch (IOException ex) {
