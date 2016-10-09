@@ -24,7 +24,7 @@ public class MovieInfoService {
 	}
 	
 	public Movieinfo getCurrentMovieRating(String rating) {
-		String url = "https://community-netflix-roulette.p.mashape.com/api.php";
+		String url = "https://community-netflix-roulette.p.mashape.com/api.php?title=Ghostbusters";
 		// Use HTTP GET with the above URL
 		try (BufferedReader reader = HttpHelper.doGet(url)) { // try with resources will auto close the reader
 			if (reader == null) {
@@ -33,15 +33,15 @@ public class MovieInfoService {
 			
 			// parse the HTTP response body to JSON
 			JsonElement root = new JsonParser().parse(reader);
-			// pick the "currentobservation" key from the root JSON object.
+			// pick the "rating1" key from the root JSON object.
 			JsonObject rating1 = root.getAsJsonObject();
 
 			Movieinfo movieinfo = new Movieinfo();
-			// pick the "Rating" key from the currentobservation object
-			movieinfo.setRating(rating1.get("Rating").getAsString());
-			// pick the "Poster" key from the currentobservation object
+			// pick the "Rating" key from the JSON object
+			movieinfo.setRating(rating1.get("rating").getAsString());
+			// pick the "Poster" key from the JSON object
 			movieinfo.setImage("http://netflixroulette.net/api/posters/541018.jpg"
-					+ rating1.get("Poster").getAsString());
+					+ rating1.get("poster").getAsString());
 
 			return movieinfo;
 		} catch (IOException ex) {

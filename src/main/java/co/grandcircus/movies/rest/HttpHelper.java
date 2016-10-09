@@ -13,9 +13,10 @@ public class HttpHelper {
         try {
             URL url = new URL(urlString);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            connection.setRequestProperty("X-MashableKey", "...");
+            connection.setRequestProperty("X-Mashape-Key", "vqKLeNUFrDmshfUd60DopAwITbrJp19qzOyjsnAURqfBjeFQ9w");
             connection.setRequestProperty("Accept", "application/json");
             BufferedReader body = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+            
             if (connection.getResponseCode() == 200) {
                 return body;
             } else {

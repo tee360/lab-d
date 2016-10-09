@@ -13,6 +13,7 @@
 <body>
 <div class="nav">
 	<a href="<c:url value="/"/>">Home</a>
+	<a href="<c:url value="/movieinfo"/>"> Additional Movie Info</a>
 	<a href="<c:url value="/movies"/>">Back to Movies List</a>
 </div>
 <h1>
@@ -29,10 +30,10 @@
 		<input type="text" name="category" value="${movie.category}"/>
 	</div>
 	<div>
-		<label class="nav">Additional Movie Info</label>
-		<a href="<c:url value="/movieinfo"/>"> Additional Movie Info</a>
-		<a href="<c:url value="/movies"/>">Back to Movies List</a>
+		<label>Additional Movie Info</label>
+		<input type="text" name="rating" value="${movieinfo.rating }"/>
 	</div>
+	Hey
 	<button type="submit">Save Changes</button>
 </form>
 
