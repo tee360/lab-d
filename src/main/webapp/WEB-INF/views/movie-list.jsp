@@ -16,6 +16,7 @@
 <body>
 <div class="nav">
 	<a href="<c:url value="/"/>">Home</a>
+	<a href="<c:url value="/movieinfo"/>"> Additional Movie Info</a>
 	<c:if test="${ not empty category }">
 		<a href="<c:url value="/movies"/>">See all movies</a>
 	</c:if>

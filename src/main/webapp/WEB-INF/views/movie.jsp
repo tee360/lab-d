@@ -29,11 +29,7 @@
 		<label>Category</label>
 		<input type="text" name="category" value="${movie.category}"/>
 	</div>
-	<div>
-		<label>Additional Movie Info</label>
-		<input type="text" name="rating" value="${movieinfo.rating }"/>
-	</div>
-	Hey
+
 	<button type="submit">Save Changes</button>
 </form>
 

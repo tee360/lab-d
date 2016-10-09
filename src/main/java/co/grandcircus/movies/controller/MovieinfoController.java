@@ -31,9 +31,9 @@ public class MovieinfoController {
 	 * Simply selects the home view to render by returning its name.
 	 */
 	@RequestMapping("/movieinfo")
-	public String movieinfo(Locale locale, Model model) {
+	public String movieinfo(Locale locale, Model model, String movieName) {
 		// add the 'movieinfo' variable to the JSP
-		model.addAttribute("movieinfo", movieInfo.getMovieRatingForGhostbusters());
+		model.addAttribute("movieinfo", movieInfo.getSelectedMovieInfo("Flight"));
 		
 		logger.info("/movieinfo -> movieinfo.jsp");
 		

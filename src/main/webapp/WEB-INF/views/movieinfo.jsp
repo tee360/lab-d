@@ -17,9 +17,17 @@
 	<h1>Additional Movie Info</h1>
 
 	<p>
-		<label>Movie Poster: </label>
+		<label>Netflix Rating</label>
 		<c:out value="${ movieinfo.rating }" />
-		<br /> <img src="${ movieinfo.image }" />
+	</p>
+	<p>
+		<label>Movie Poster: </label> <br>
+		 <img src="${ movieinfo.image }" />
+	</p>
+	<p>
+		<label>Movie Summary:</label><br>
+		<c:out value="${movieinfo.summary }"></c:out>
+		
 	</p>
 
 </body>
