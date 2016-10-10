@@ -61,15 +61,15 @@ public class MovieInfoService {
 			// parse the HTTP response body to JSON
 			JsonElement root = new JsonParser().parse(reader);
 			// pick the "rating1" key from the root JSON object.
-			JsonObject jObject = root.getAsJsonObject();
+			JsonObject rootObject = root.getAsJsonObject();
 
 			Movieinfo movieinfo = new Movieinfo();
 			// pick the "Rating" key from the JSON object
-			movieinfo.setRating(jObject.get("rating").getAsString());
+			movieinfo.setRating(rootObject.get("rating").getAsString());
 			// pick the "Poster" key from the JSON object
-			movieinfo.setImage(jObject.get("poster").getAsString());
+			movieinfo.setImage(rootObject.get("poster").getAsString());
 			// pick the "Summary" key from the JSON object
-			movieinfo.setSummary(jObject.get("summary").getAsString());
+			movieinfo.setSummary(rootObject.get("summary").getAsString());
 
 			return movieinfo;
 		} catch (IOException ex) {

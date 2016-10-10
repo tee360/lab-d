@@ -13,6 +13,7 @@
 <body>
 	<div class="nav">
 		<a href="<c:url value="/"/>">Home</a>
+		<a href="<c:url value="/movies"/>">Back to Movies List</a>
 	</div>
 	<h1>Additional Movie Info</h1>
 
@@ -25,7 +26,7 @@
 		 <img src="${ movieinfo.image }" />
 	</p>
 	<p>
-		<label>Movie Summary:</label><br>
+		<label><b>Movie Summary:</label><br>
 		<c:out value="${movieinfo.summary }"></c:out>
 		
 	</p>

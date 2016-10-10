@@ -13,7 +13,7 @@
 <body>
 <div class="nav">
 	<a href="<c:url value="/"/>">Home</a>
-	<a href="<c:url value="/movieinfo"/>"> Additional Movie Info</a>
+	<a href="<c:url value="/movieinfo?movieName=${movie.title }"/>"> Additional Movie Info</a>
 	<a href="<c:url value="/movies"/>">Back to Movies List</a>
 </div>
 <h1>

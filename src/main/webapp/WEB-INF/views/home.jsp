@@ -18,6 +18,5 @@
 <a href="<c:url value="/categories"/>">Categories</a>
 <a href="<c:url value="/users"/>">Users</a>
 <a href="<c:url value="/weather"/>">Weather Center</a>
-<a href="<c:url value="/movieinfo"/>"> Additional Movie Info</a>
 </body>
 </html>
